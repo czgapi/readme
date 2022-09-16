@@ -1,0 +1,483 @@
+    1  ll
+    2  groupadd centos
+    3  useradd -g centos centos
+    4  vi /etc/sudoers
+    5  cd /home/centos/
+    6  ll
+    7  pwd
+    8  mkdir .ssh
+    9  cd .ssh
+   10  ll
+   11  pwd
+   12  rz
+   13  yum install lszrz
+   14  yum install lrzsz
+   15  ll
+   16  rz
+   17  ll
+   18  cat authorized_keys 
+   19  ll
+   20  chown centos:centos authorized_keys 
+   21  ll
+   22  cd ..
+   23  ll
+   24  ls -a
+   25  ls -la
+   26  chown centos:centos .ssh
+   27  ll
+   28  ls -la
+   29  cd ..
+   30  ll
+   31  cd centos/
+   32  ll
+   33  ls -la
+   34  cd .ssh/
+   35  ll
+   36  ssh-keygen -t rsa
+   37  ll
+   38  pwd
+   39  cd /root/.ssh
+   40  ll
+   41  mv id_rsa /home/centos/.ssh/
+   42  mv id_rsa.pub /home/centos/.ssh/
+   43  ll
+   44  cd /home/centos/.ssh/
+   45  ll
+   46  chown centos:centos id_rsa
+   47  chown centos:centos id_rsa.pub 
+   48  ll
+   49  chmod 600 authorized_keys 
+   50  ll
+   51  free -m
+   52  df -ah
+   53  top
+   54  iptables -nvL
+   55  ping www.baidu.com
+   56  java -v
+   57  yum install -y supervisor
+   58  yum install python3
+   59  ll
+   60  ls
+   61  pwd
+   62  cd /home
+   63  ll
+   64  cd centos/
+   65  ll
+   66  cd ..
+   67  ll
+   68  cd /data
+   69  ll
+   70  cd /home
+   71  cd /root
+   72  dir
+   73  ls
+   74  cd /home
+   75  ll
+   76  cd /root
+   77  ll
+   78  rz
+   79  python3
+   80  ll
+   81  unzip python3.8.zip 
+   82  yum install unzip
+   83  ll
+   84  unzip python3.8.zip 
+   85  cd /usr/local/bin/
+   86  ll
+   87  cd /usr/bin
+   88  ls
+   89  ls py*
+   90  ls py* -ll
+   91  cd python3.6
+   92  ln -s python3.8 /usr/local/python3.8/bin/python3.8
+   93  ln -s /usr/local/python3.8/bin/python3.8 python3.8
+   94  ls py* -ll
+   95  python3.8
+   96  ls /usr/local/python3.8/bin/python3.8
+   97  cd /usr/local/
+   98  ll
+   99  cd  usr/local/python3.8
+  100  cd  /usr/local/python3.8
+  101  ls /usr/local/python3.8/lib/python3.8/html/
+  102  cd /usr/local/
+  103  ll
+  104  cd /root
+  105  ll
+  106  cd usr
+  107  ll
+  108  mv ./local /usr/
+  109  ll
+  110  cd usr
+  111  ll
+  112  mv ./local /usr/
+  113  ll
+  114  cd ..
+  115  ll
+  116  rm -rf ./usr
+  117  ll
+  118  mv python3.8.zip /
+  119  cd /
+  120  ll
+  121  unzip python3.8.zip 
+  122  ll
+  123  cd /usr/local/
+  124  ll
+  125  cd bin/
+  126  ll
+  127  cd ..
+  128  ll
+  129  python3.8
+  130  yum -y install  libatomic
+  131  python3.8
+  132  ll
+  133  yum install redis-server
+  134  yum -y install redis
+  135  systemctl enable redis
+  136  systemctl restart redis
+  137  netstat -ntlp
+  138  pwd
+  139  cd /root
+  140  ll
+  141  wget dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
+  142  yum localinstall mysql-community-release-el6-5.noarch.rpm
+  143  yum install mysql-community-server
+  144  rpm -qa|grep mysql
+  145  rpm -e mysql-community-release-el6-5.noarch.rpm 
+  146  yum remove mysql-community-release-el6-5
+  147  rpm -qa|grep mysql
+  148  ll
+  149  rm -rf mysql-community-release-el6-5.noarch.rpm 
+  150  ll
+  151  wget http://repo.mysql.com/mysql57-community-release-el7-8.noarch.rpm
+  152  rpm -ivh mysql57-community-release-el7-8.noarch.rpm
+  153  yum install mysql-server
+  154  ll
+  155  yum remove mysql57-community-release-el7-8
+  156  rpm -qa|grep mysql
+  157  ll
+  158  rm -rf mysql57-community-release-el7-8.noarch.rpm 
+  159  ll
+  160  wget  https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm
+  161  rpm -ivh mysql80-community-release-el7-1.noarch.rpm 
+  162  yum install mysql-community-server
+  163  vi /etc/my.cnf
+  164   systemctl status mysqld
+  165  rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+  166  yum install mysql-community-server
+  167   systemctl status mysqld
+  168  systemctl enable mysqld
+  169  systemctl start mysqld
+  170  cat /var/log/mysqld.log | grep password
+  171  vi /var/log/mysqld.log 
+  172  cd /var/lib/mysql
+  173  ls
+  174  systemctl status mysqld
+  175  mysql -u root -p
+  176  redis
+  177  netstat -ntlp
+  178  redis-cli
+  179  pwd
+  180  cd /root
+  181  ll
+  182  rz
+  183  mysql -u root -p
+  184  systemctl restart mysqld
+  185  mysql -u root -p
+  186  ll
+  187  cd /data
+  188  ll
+  189  cd /
+  190  ll
+  191  mkdir data
+  192  cd data
+  193  ll
+  194  mkdir sites
+  195  cd ..
+  196  ll
+  197  df -h
+  198  ll
+  199  cd /data/
+  200  ll
+  201  chown centos:centos sites
+  202  ll
+  203  cd sites/
+  204  ll
+  205  cd magic_config/
+  206  ll
+  207  yum install -y supervisor
+  208  vi /etc/supervisord.conf 
+  209  cd /etc/supervisord.d/
+  210  ll
+  211  rz
+  212  ll
+  213  vi magic_config.sql 
+  214  ll
+  215  rm -rf magic_config.sql 
+  216  ll
+  217  rz
+  218  ll
+  219  vi magic_config.conf 
+  220  ll
+  221  cd ..
+  222  ll
+  223  cd supervisord.d/
+  224  ll
+  225  vi magic_config.conf 
+  226  ll
+  227  systemctl status supervisord
+  228  systemctl enable supervisord
+  229  systemctl start supervisord
+  230  systemctl status supervisord
+  231  vi /etc/supervisord.conf 
+  232  ll
+  233  vi magic_config.conf 
+  234  cd /data
+  235  ll
+  236  mkdir supervisor
+  237  ll
+  238  chown centos:centos supervisor/
+  239  ll
+  240  cd /root
+  241  ll
+  242  rz
+  243  ll
+  244  pwd
+  245  cd /etc/
+  246  rm -rf supervisord.conf 
+  247  mv /root/supervisord.conf ./
+  248  systemctl restart supervisord
+  249  systemctl status supervisord.service
+  250  cd /data/sites/magic_config/
+  251  ll
+  252  mkdir logs
+  253  ll
+  254  chown centos:centos logs
+  255  ll
+  256  systemctl restart supervisord
+  257  ls /usr/local/bin/python3.8
+  258  cd /usr/local/
+  259  ll
+  260  cd bin/
+  261  ll
+  262  cd ..
+  263  ll
+  264  ls -ll
+  265  cd python3.8/
+  266  ll
+  267  cd ..
+  268  ll
+  269  cd bin
+  270  ln -s /usr/local/python3.8/bin/python3.8 python3.8
+  271  ll
+  272  systemctl status nginx
+  273  yum install nginx
+  274  systemctl enable nginx
+  275  cd /etc/nginx/conf.d/
+  276  ll
+  277  cd ..
+  278  ll
+  279  rz
+  280  ll
+  281  unzip conf.d.zip 
+  282  ll
+  283  cd conf.d
+  284  ll
+  285  vi magic_config.conf 
+  286  systemctl restart nginx
+  287  systemctl status nginx.service
+  288  cd ..
+  289  vi nginx.conf
+  290  ll
+  291  rm -rf nginx.conf
+  292  rz
+  293  ll
+  294  systemctl restart nginx
+  295  cd /data/sites/
+  296  ll
+  297  mkdir magic_demo
+  298  ll
+  299  cd /etc/supervisord.
+  300  lld
+  301  cd /etc/supervisord.d/
+  302  ll
+  303  vi magic_config.conf 
+  304  ll
+  305  netstat -nultp
+  306  ll
+  307  top
+  308  cd /etc/supervisord.d/
+  309  ll
+  310  vi magic_config.conf 
+  311  cd /var/log/nginx/
+  312  ll
+  313  vi magic_config.access.log 
+  314  ll
+  315  cd /data/sites/
+  316  ll
+  317  cd magic_config/
+  318  ll
+  319  cd static/
+  320  ll
+  321  cd android/
+  322  ll
+  323  sz t0.0.*
+  324  ps -aux|grep jar
+  325  cd /data/sites/
+  326  ll
+  327  cd magic_config/
+  328  ll
+  329  cd ..
+  330  ll
+  331  cd magic_demo/
+  332  ll
+  333  vi startup.sh 
+  334  ll
+  335  vi stop.sh 
+  336  ll
+  337  ./stop.sh 
+  338  ./startup.sh 
+  339  ps -aux|grep jar
+  340  ll
+  341  vi startup.sh 
+  342  ll
+  343  vi restart.sh 
+  344  ll
+  345  vi startup.sh 
+  346  ll
+  347  mkdir logs
+  348  ll
+  349  ./startup.sh 
+  350  cd logs
+  351  ll
+  352  cd ..
+  353  ./stop.sh 
+  354  ll
+  355  vi startup.sh 
+  356  ll
+  357  java -jar game-server-1.0.jar
+  358  java
+  359  yum install java-1.8.0-openjdk* -y
+  360  java -v
+  361  java -version
+  362  ll
+  363  java -jar ./game-server-1.0.jar 
+  364  cd config/
+  365  ll
+  366  vi jdbc.properties 
+  367  ll
+  368  vi server.properties 
+  369  ll
+  370  vi web.properties 
+  371  d ..
+  372  ll
+  373  cd ..
+  374  ll
+  375  chown centos:centos ./logs
+  376  ll
+  377  cd /data/sites/magic_demo/logs
+  378  ll
+  379  rm -rf *(
+  380  rm -rf *
+  381  ll
+  382  vi /etc/nginx/conf.d/magic_config.conf 
+  383  nginx -s reload
+  384  cd /usr/share/nginx/html/
+  385  ll
+  386  ls /data/sites/
+  387  ln -s /data/sites/magic_admin ./magic_admin
+  388  ll
+  389  ln -s /data/sites/magic_remain ./magic_remain
+  390  ll
+  391  mysql -h localhost -u root -p tyuJmnbG19*#qwedC
+  392  mysql -h localhost -u root
+  393  mysql -h 127.0.0.1 -u root
+  394  mysql -h localhost
+  395  mysql -h 127.0.0.1 -u root -P tyuJmnbG19*#qwedC
+  396  mysql -h 127.0.0.1 -u root 
+  397  mysql -u root -p 
+  398  cd /home/
+  399  ls
+  400  cd centos/
+  401  ls
+  402  cd /data/
+  403  ls
+  404  cd sites/
+  405  ls
+  406  cd magic_demo/
+  407  ls
+  408  cd logs/
+  409  ls
+  410  cd game/
+  411  tail -f info.log 
+  412  cd ..
+  413  ls
+  414  cd ..
+  415  ls
+  416  ./startup.sh 
+  417  tail -f /data/sites/magic_test/logs/game/info.log 
+  418  tail -f logs/game/info.log 
+  419  mysql -u root -p 
+  420  ls
+  421  ./stop.sh 
+  422  less startup.sh 
+  423  ./startup.sh 
+  424  tail -f logs/game/info.log 
+  425  ls
+  426  cd .
+  427  cd ..
+  428  ls
+  429  cd magic_config/
+  430  ls
+  431  cd static/
+  432  ls
+  433  cd config/
+  434  ls
+  435  ls | grep player_id
+  436  ls | grep player
+  437  ls | grep guide
+  438  ls | grep quset_guide
+  439  ls | grep quest_guide
+  440  ls | grep config.
+  441  ll | grep config.
+  442  ll -rt | grep config.
+  443  cd ..
+  444  ls
+  445  cd ..
+  446  ls
+  447  cd ..
+  448  ls
+  449  cd magic_demo/
+  450  ls
+  451  tail -f logs/game/info.log 
+  452  ls
+  453  ll 
+  454  ps -ef | grep java
+  455  ./stop.sh 
+  456  tail -f logs/game/info.log 
+  457  ps -ef | grep java
+  458  tail -f logs/game/info.log 
+  459  ls
+  460  tail -f logs/game/info.log 
+  461  tail -f logs/game/error.log 
+  462  tail -100 logs/game/error.log 
+  463  tail -f logs/game/error.log 
+  464  grep "send guild info error uid" logs/game/info.log 
+  465  tail -f logs/game/error.log 
+  466  tail -100 logs/game/error.log 
+  467  ls
+  468  cd /data/sites/magic_demo/logs/game/
+  469  ls
+  470  cd 2022-09/
+  471  ls
+  472  grep info-2022-09-0* 
+  473  grep "CsTowerFight" info-2022-09-0* | less
+  474  grep "CgArenaChallenge" info-2022-09-0* | less
+  475  exit
+  476  cd /etc/nginx/conf.d/
+  477  ll
+  478  history
+  479  cd /home/
+  480  ll
+  481  cd centos/
+  482  ll
+  483  history > history.log
